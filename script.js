@@ -1,12 +1,16 @@
 const testWrapper = document.querySelector(".test-wrapper");
 const testArea = document.querySelector("#test-area");
-const originText = document.querySelector("#origin-text p").innerHTML;
 const resetButton = document.querySelector("#reset");
 const theTimer = document.querySelector(".timer");
+const exercise1=document.querySelector("#ex1");
 var timer=[0,0,0,0];
 var interval;
 var timerrunning=false;
+var testspace=document.querySelector("#origin-text p");
 // Add leading zero to numbers 9 or below (purely for aesthetics):
+testspace.innerHTML=exercise1.innerHTML;
+var originText = testspace.innerHTML;
+
 function leadingZero(time){
     if(time<=9){
         time="0"+time;
@@ -29,12 +33,14 @@ function runTimer(){
 function spellCheck(){
     let testEntered=testArea.value;
     let originTextMatch=originText.substring(0,testEntered.length);
+    console.log(originTextMatch)
+    console.log(testEntered)
     if(testEntered==originText){
         testWrapper.style.borderColor="green";
         clearInterval(interval)
     }
     else{
-        if(testEntered==originTextMatch){
+        if(testEntered == originTextMatch){
             testWrapper.style.borderColor="blue";
 
         }
@@ -42,7 +48,6 @@ function spellCheck(){
             testWrapper.style.borderColor="red";
         }
     }
-    console.log(testEntered)
 }
 
 // Start the timer:
@@ -78,3 +83,12 @@ resetButton.addEventListener("click",reset,false);
 
 
 //high score board
+
+//choose test execrsice
+function changeTestSpace(id){
+console.log(id)
+let exe=document.getElementById(id);
+console.log(exe)
+testspace.innerHTML=exe.innerHTML;
+ originText = testspace.innerHTML;
+}

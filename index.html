@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JS Typing Speed Test</title>
     <script src="script.js" async></script>
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i,900,900i" type="text/css" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i,900,900i"
+        type="text/css" media="all">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 </head>
 
 <body>
@@ -16,15 +22,72 @@
     </header>
     <main class="main">
         <article class="intro">
-            <p>This is a typing test. Your goal is to duplicate the provided text, EXACTLY, in the field below. The timer starts when you start typing, and only stops when you match this text exactly. Good Luck!</p>
+            <p>This is a typing test. Your goal is to duplicate the provided text, EXACTLY, in the field below. The
+                timer starts when you start typing, and only stops when you match this text exactly. Good Luck with the
+                challenge!</p>
         </article><!-- .intro -->
-        <section class="test-area">
+        <div class="row" style="margin: 10px; ">
+            <div class="col  ">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> Excercise 1
+                            <a href="#section1" class="btn btn-primary btn-circle btn-sm" onclick="changeTestSpace('ex1')"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </h5>
+
+                        <p id="ex1" class="card-text">Manifest Your Dreams.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col  ">
+                <div class="card ">
+                    <div class="card-body">
+                        <h5 class="card-title"> Excercise 2
+                            <a href="#section1" class="btn btn-primary btn-circle btn-sm" onclick="changeTestSpace('ex2')"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </h5>
+                        <p  id="ex2" class="card-text">Be kind to your mind.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col  ">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> Excercise 3
+                            <a href="#section1" class="btn btn-primary btn-circle btn-sm" onclick="changeTestSpace('ex3')"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </h5>
+                        <p id="ex3" class="card-text">Challege Yourself to Cross your Limits.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col  ">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> Excercise 4
+                            <a href="#section1" class="btn btn-primary btn-circle btn-sm" onclick="changeTestSpace('ex4')"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </h5>
+                        <p id="ex4" class="card-text">Live out of your comfort zone and seek DISCOMFORT.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col  ">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"> Excercise 5
+                            <a href="#section1" class="btn btn-primary btn-circle btn-sm" onclick="changeTestSpace('ex5')"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        </h5>
+                        <p id="ex5" class="card-text">Give it sometime and let the Universe create its Magic.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="test-area" id="section1">
             <div id="origin-text">
-                <p>The text to test.</p>
+                <p>Be Kind to Your Mind.</p>
             </div><!-- #origin-text -->
 
             <div class="test-wrapper">
-                <textarea id="test-area" name="textarea" rows="6" placeholder="The clock starts when you start typing."></textarea>
+                <textarea id="test-area" name="textarea" rows="6"
+                    placeholder="The clock starts when you start typing."></textarea>
             </div><!-- .test-wrapper -->
 
             <div class="meta">
